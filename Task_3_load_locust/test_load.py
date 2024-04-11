@@ -1,16 +1,8 @@
-from locust import HttpUser, constant, task
+from locust import HttpUser, task
 
 
-class MyReqRes(HttpUser):
+class ReqResPost(HttpUser):
     host = "https://reqres.in"
-    wait_time = constant(1)
-
-    @task
-    def get_user(self):
-        response = self.client.get("/api/users/2")
-        print(response.status_code)
-        print(response.text)
-        print(response.headers)
 
     @task
     def create_user(self):
