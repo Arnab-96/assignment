@@ -16,7 +16,7 @@ print(response.status_code)
 json_response = json.loads(response.content)
 print(json_response)
 
-# pick name and job using json path
+# pick error message json path
 error_msg = jsonpath.jsonpath(json_response, 'error')[0]
 print(error_msg)
 
