@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-10T23:54:46.561561" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-11T12:43:52.191111" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Robot Post Request" source="/home/arnab_linux/PycharmProjects/robot_framework_project/Task_2_robot/test_robot_post_request.robot">
 <test id="s1-t1" name="Post_User" line="9">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-04-10T23:54:46.755209" level="INFO">Creating Session using : alias=mysession, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-04-11T12:43:52.469584" level="INFO">Creating Session using : alias=mysession, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-04-10T23:54:46.754724" elapsed="0.000823"/>
+<status status="PASS" start="2024-04-11T12:43:52.469103" elapsed="0.000800"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-04-10T23:54:46.756669" level="INFO">${body} = {'name': 'John', 'job': 'SDET'}</msg>
+<msg time="2024-04-11T12:43:52.470895" level="INFO">${body} = {'name': 'John', 'job': 'SDET'}</msg>
 <var>${body}</var>
 <arg>name=John</arg>
 <arg>job=SDET</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-04-10T23:54:46.756017" elapsed="0.000709"/>
+<status status="PASS" start="2024-04-11T12:43:52.470263" elapsed="0.000692"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-04-10T23:54:46.757595" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<msg time="2024-04-11T12:43:52.471823" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
 <var>${header}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-04-10T23:54:46.757132" elapsed="0.000512"/>
+<status status="PASS" start="2024-04-11T12:43:52.471389" elapsed="0.000482"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-04-10T23:54:47.173755" level="INFO">POST Request : url=https://reqres.in/api/users 
+<msg time="2024-04-11T12:43:53.217270" level="INFO">POST Request : url=https://reqres.in/api/users 
  path_url=/api/users 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '18', 'Content-Type': 'application/x-www-form-urlencoded'} 
  body=name=John&amp;job=SDET 
  </msg>
-<msg time="2024-04-10T23:54:47.173902" level="INFO">POST Response : url=https://reqres.in/api/users 
+<msg time="2024-04-11T12:43:53.217421" level="INFO">POST Response : url=https://reqres.in/api/users 
  status=201, reason=Created 
- headers={'Date': 'Wed, 10 Apr 2024 18:24:47 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '78', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1712773487&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=F4hT7jlSdP060xuX0SvFjuSgpvNwb1vpr4i9r7d4bmg%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1712773487&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=F4hT7jlSdP060xuX0SvFjuSgpvNwb1vpr4i9r7d4bmg%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"4e-bQDTm6zzqScqTOL6CpRrth4M0bw"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8724c694ee0b47c7-BOM'} 
- body={"name":"John","job":"SDET","id":"426","createdAt":"2024-04-10T18:24:47.094Z"} 
+ headers={'Date': 'Thu, 11 Apr 2024 07:13:53 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '78', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1712819633&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Hx7Iz6zJYPRusjvx5tzKoOmyMN9TXgLHXkm9o4N%2BVOA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1712819633&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Hx7Iz6zJYPRusjvx5tzKoOmyMN9TXgLHXkm9o4N%2BVOA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"4e-NhhgWxSN5nTwyyZB1Bxj4B77YTY"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '87292d30dc2d1d39-BLR'} 
+ body={"name":"John","job":"SDET","id":"296","createdAt":"2024-04-11T07:13:53.019Z"} 
  </msg>
-<msg time="2024-04-10T23:54:47.174058" level="INFO">/home/arnab_linux/PycharmProjects/robot_framework_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-04-11T12:43:53.217569" level="INFO">/home/arnab_linux/PycharmProjects/robot_framework_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-04-10T23:54:47.174307" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2024-04-11T12:43:53.217806" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/api/users</arg>
 <arg>${body}</arg>
 <arg>${header}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-04-10T23:54:46.758009" elapsed="0.416373"/>
+<status status="PASS" start="2024-04-11T12:43:52.472211" elapsed="0.745661"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-10T23:54:47.174901" elapsed="0.001469"/>
+<status status="PASS" start="2024-04-11T12:43:53.218386" elapsed="0.001514"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-10T23:54:47.176828" elapsed="0.001331"/>
+<status status="PASS" start="2024-04-11T12:43:53.220327" elapsed="0.000958"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-04-10T23:54:47.179985" level="INFO">${status_code} = 201</msg>
+<msg time="2024-04-11T12:43:53.222685" level="INFO">${status_code} = 201</msg>
 <var>${status_code}</var>
 <arg>${response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-04-10T23:54:47.178611" elapsed="0.001457"/>
+<status status="PASS" start="2024-04-11T12:43:53.221755" elapsed="0.000981"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${status_code}</arg>
 <arg>201</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-04-10T23:54:47.180526" elapsed="0.000609"/>
+<status status="PASS" start="2024-04-11T12:43:53.223176" elapsed="0.000441"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-04-10T23:54:47.182963" level="INFO">${body} = {"name":"John","job":"SDET","id":"426","createdAt":"2024-04-10T18:24:47.094Z"}</msg>
+<msg time="2024-04-11T12:43:53.224905" level="INFO">${body} = {"name":"John","job":"SDET","id":"296","createdAt":"2024-04-11T07:13:53.019Z"}</msg>
 <var>${body}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-04-10T23:54:47.181588" elapsed="0.001451"/>
+<status status="PASS" start="2024-04-11T12:43:53.224015" elapsed="0.000941"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${body}</arg>
 <arg>John</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-10T23:54:47.183531" elapsed="0.000461"/>
+<status status="PASS" start="2024-04-11T12:43:53.225454" elapsed="0.000385"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:54:46.753250" elapsed="0.431101"/>
+<status status="PASS" start="2024-04-11T12:43:52.467967" elapsed="0.758246"/>
 </test>
-<status status="PASS" start="2024-04-10T23:54:46.564179" elapsed="0.621028"/>
+<status status="PASS" start="2024-04-11T12:43:52.192753" elapsed="1.034397"/>
 </suite>
 <statistics>
 <total>

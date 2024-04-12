@@ -3,9 +3,9 @@ import jsonpath
 import requests
 
 # Api url
-url = 'https://reqres.in/api/users'
+url = 'https://reqres.in/api/login'
 
-json_request = json.loads('{"name":"Akash","job":"QA"}')
+json_request = json.loads('{"email":"rakesh@gmail.com"}')
 
 # make post request with json input body
 response = requests.post(url, json_request)
@@ -17,12 +17,9 @@ json_response = json.loads(response.content)
 print(json_response)
 
 # pick name and job using json path
-name = jsonpath.jsonpath(json_response, 'name')[0]
-print(name)
-job = jsonpath.jsonpath(json_response, 'job')[0]
-print(job)
+error_msg = jsonpath.jsonpath(json_response, 'error')[0]
+print(error_msg)
 
 # Validations
-assert response.status_code == 201, "Expected and Actual status code is not matching"
-assert name == "Akash", "Expected and Actual name is not matching"
-assert job == "QA", "Expected and Actual job is not matching"
+assert response.status_code == 400, "Expected and Actual status code is not matching"
+assert error_msg == "Missing password", "Expected and Actual error message is not matching"
